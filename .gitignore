@@ -28,7 +28,7 @@ replay_pid*
 .kotlin/
 
 # Build folders
-build/
+/build/
 .gradle/
 .intellijPlatform/
 
