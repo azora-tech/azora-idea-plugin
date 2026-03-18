@@ -20,16 +20,14 @@ jobs:
 
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v4
-        with:
-          gradle-version: '9.1'
 
       - name: Build & test
-        run: gradle build
+        run: ./gradlew build
         env:
           CI: true
 
       - name: Publish to JetBrains Marketplace
-        run: gradle publishPlugin
+        run: ./gradlew publishPlugin
         env:
           CI: true
           PUBLISH_TOKEN: ${{ secrets.PUBLISH_TOKEN }}
